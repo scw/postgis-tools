@@ -23,7 +23,7 @@ psql -f postgis_comments.sql $DATABASE;
 psql -f _int-8.4.sql $DATABASE;
 
 echo "ALTER TABLE geometry_columns OWNER TO $USERNAME;" | psql -d $DATABASE
-echo "ALTER TABLE geography_columns OWNER TO $USERNAME;" | psql -d $DATABASE
+echo "ALTER VIEW geography_columns OWNER TO $USERNAME;" | psql -d $DATABASE
 echo "ALTER TABLE spatial_ref_sys OWNER TO $USERNAME;" | psql -d $DATABASE
 
 # TO DO : passwords...
